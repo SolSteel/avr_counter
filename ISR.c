@@ -22,4 +22,14 @@ ISR (INT2_vect)
 ISR (TIMER1_COMPA_vect)
 {
 	secs++;
+	if(secs==60)
+	{
+		mins++;
+		secs=0;
+	}
+	if(mins==60)
+	{
+		hours++;
+		mins=0;
+	}
 }
