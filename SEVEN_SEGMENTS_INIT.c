@@ -1,0 +1,9 @@
+#include<avr/io.h>
+#include "SEVEN_SEGMENTS_INIT.h"
+void SEVEN_SEGMENT_INIT() //common anode
+{
+	DDRC|=0x0F; //OUTPUT FOR 7 SEGMENT
+	DDRA|=0x3F; //ENABLE FOR THE 6 7 SEGMENTS
+	PORTA&=~0x3F; //ALL OFF AT THE BEGINNING
+	PORTC&=~0x0F; //INITIALLY 0
+}
